@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <canvas id="background"></canvas>
+    
+    <div class="container">
+        <header>
+            <h1>Day Planner</h1>
+            <div class="date-container">
+                <span id="current-date"></span>
+            </div>
+        </header>
+
+        <div class="add-task">
+            <input type="text" id="task-input" placeholder="Add a new task">
+            <input type="time" id="time-input">
+            <button id="add-btn">
+                <i class="fas fa-plus"></i> Add Task
+            </button>
+        </div>
+
+        <div class="tasks-container">
+            <div class="tasks-header">
+                <h2>Today's Tasks</h2>
+                <div class="filter">
+                    <select id="filter-tasks">
+                        <option value="all">All</option>
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+            </div>
+            <ul id="tasks-list"></ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="background.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
